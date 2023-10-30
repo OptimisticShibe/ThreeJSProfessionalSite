@@ -10,9 +10,9 @@ import { Loop } from "./systems/Loop.js";
 import { MathUtils, TextureLoader } from "three";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { BEAN_RATIO } from "../../utils/constants.js";
-import { plusOrMinus } from "../../utils/utils.js";
-import { vaporwaveBg } from "../../assets/vaporwave4.jpg";
+import { BEAN_RATIO } from "./../../utils/constants.js";
+import { plusOrMinus } from "./../../utils/utils.js";
+import { vaporwaveBg } from "./../../assets/vaporwave4.jpg";
 
 let camera;
 let controls;
