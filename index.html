@@ -21,7 +21,64 @@
 <body>
 
   <div class="mobileConstruction">
-    <h1>This site is not mobile-ready, please visit it on desktop.</h1>
+    <div class="mobileConDiv">
+      <h1>This site is not mobile-ready, please visit it on desktop.</h1>
+    </div>
+    <header id="top" class="mobileConstruction">
+      <div class="headerContentContainer">
+        <div class="headerText">
+          <h1>Rafiq Ramadan</h1>
+          <p id="subtitleLg">
+            <em>WebDev &#8226; Fullstack Engineer</em>
+            <br />
+            <em>Chicago, IL</em>
+          </p>
+          <p id="subtitleSm">
+            <span><em>WebDev &#8226; Fullstack Engineer</em></span>
+            <br />
+            <em>Chicago, IL</em>
+          </p>
+        </div>
+        <div class="headerImg">
+          <img src="/assets/RegalBadgeTransparent.png" alt="Argent Badge" />
+        </div>
+      </div>
+      <div class="linkTrayLg">
+        <!-- CONTACT -->
+        <div class="linkTraySection">
+          <div class="linkTrayText">
+            <span>Contact</span>
+          </div>
+          <div class="buttonContainerLg">
+            <a id="linkedInSmall" href="https://www.linkedin.com/in/rafiq-ramadan-748640117/" class="cirButton tooltip"
+              target="_blank" rel="noopener noreferrer" data-text="LinkedIn">
+              <img src="/assets/svg/linkedin.svg" alt="linkedIn logo" />
+            </a>
+            <a id="linkedInSmall" href="mailto:ramadanrafi@gmail.com" class="cirButton tooltip" target="_blank"
+              rel="noopener noreferrer" data-text="Email">
+              <img src="/assets/svg/email.svg" alt="email" />
+            </a>
+            <button id="linkedInSmall" class="cirButton tooltip smoothScroll" scroll-id="contact" data-text="Phone">
+              <img src="/assets/svg/phone.svg" alt="phone" />
+            </button>
+          </div>
+        </div>
+        <div class="linkTraySection">
+          <!-- CODE -->
+          <div class="linkTrayText">
+            <span>Software Dev</span>
+          </div>
+          <div class="buttonContainerLg">
+            <a id="githubSmall" class="cirButton tooltip" href="https://github.com/OptimisticShibe" target="_blank"
+              rel="noopener noreferrer" data-text="Github"><img src="/assets/svg/github.svg" alt="github" /></a>
+            <button id="topFiveAppSmall" class="cirButton tooltip smoothScroll" data-text="TopFive"
+              scroll-id="topfivespotify"><img src="/assets/svg/react.svg" alt="github" /></button>
+            <button id="threeJsAppSmall" class="cirButton tooltip smoothScroll" data-text="Three.js"
+              scroll-id="threeJsApp"><img src="/assets/svg/sun-fog.svg" alt="Three.js" /></button>
+          </div>
+        </div>
+      </div>
+    </header>
   </div>
   <div class="lds-dual-ring mobileBlocked" id="loadingSpinner"></div>
   <canvas id="bg" class="mobileBlocked"></canvas>

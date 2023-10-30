@@ -247,14 +247,17 @@ blockquote p {
 
 .mobileConstruction {
   display: none;
-  background-color: #29346e;
-  border-radius: 10px;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   color: #fff;
-  margin-top: 50%;
-  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.mobileConDiv {
+  background: var(--dark-bg);
+  border-radius: 10px;
 }
 
 /* * * * * * * 🤯 HEADER 🤯 * * * * * * */
