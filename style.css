@@ -241,6 +241,10 @@ blockquote p {
   list-style-type: none;
 }
 
+.smoothScroll:hover {
+  cursor: pointer;
+}
+
 /* * * * * * * 🤯 HEADER 🤯 * * * * * * */
 
 header {
