@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="lds-dual-ring" id="loadingSpinner"></div>
+  <canvas id="bg"></canvas>
+  <main class="container" id="main" onscroll="hideScrollToTop()">
+    <header id="top">
+      <div class="headerContentContainer">
+        <div class="headerText">
+          <h1>Rafiq Ramadan</h1>
+          <p id="subtitleLg">
+            <em>WebDev &#8226; Fullstack Engineer</em>
+            <br />
+            <em>Chicago, IL</em>
+          </p>
+          <p id="subtitleSm">
+            <span><em>WebDev &#8226; Fullstack Engineer</em></span>
+            <br />
+            <em>Chicago, IL</em>
+          </p>
+        </div>
+        <div class="headerImg">
+          <img src="assets\RegalBadgeTransparent.png" alt="Argent Badge" />
+        </div>
+      </div>
+      <div class="linkTrayLg">
+        <!-- CONTACT -->
+        <div class="linkTraySection">
+          <div class="linkTrayText">
+            <span>Contact</span>
+          </div>
+          <div class="buttonContainerLg">
+            <a id="linkedInSmall" href="https://www.linkedin.com/in/rafiq-ramadan-748640117/" class="cirButton tooltip"
+              target="_blank" rel="noopener noreferrer" data-text="LinkedIn">
+              <img src="assets/svg/linkedin.svg" alt="linkedIn logo" />
+            </a>
+            <a id="linkedInSmall" href="mailto:ramadanrafi@gmail.com" class="cirButton tooltip" target="_blank"
+              rel="noopener noreferrer" data-text="Email">
+              <img src="assets/svg/email.svg" alt="linkedIn logo" />
+            </a>
+            <button id="linkedInSmall" class="cirButton tooltip" onclick="smoothScrollAnchor('contact')" target="_blank"
+              rel="noopener noreferrer" data-text="Phone">
+              <img src="assets/svg/phone.svg" alt="linkedIn logo" />
+            </button>
+          </div>
+        </div>
+        <div class="linkTraySection">
+          <!-- CODE -->
+          <div class="linkTrayText">
+            <span>Software Dev</span>
+          </div>
+          <div class="buttonContainerLg">
+            <a id="githubSmall" class="cirButton tooltip" href="https://github.com/OptimisticShibe" target="_blank"
+              rel="noopener noreferrer" data-text="Github"><img src="assets/svg/github.svg" alt="github" /></a>
+            <button id="topFiveAppSmall" class="cirButton tooltip" target="_blank" rel="noopener noreferrer"
+              data-text="TopFive"><img src="assets/svg/react.svg" alt="github"
+                onclick="smoothScrollAnchor('topfivespotify')" /></button>
+            <button id="threeJsAppSmall" class="cirButton tooltip" target="_blank" rel="noopener noreferrer"
+              data-text="Three.js"><img src="assets/svg/sun-fog.svg" alt="Three.js"
+                onclick="smoothScrollAnchor('threeJsApp')" /></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="scrollArrowBox">
+      <div class="scrollArrowContainer">
+        <img class="scrollArrow" src="assets/svg/down-arrow.svg" onclick="smoothScrollAnchor('about')" />
+      </div>
+    </div>
+    <section id="about">
+      <div class="aboutContainer">
+        <div class="aboutText">
+          <h2 id="aboutHeader">✨🐍 About</h2>
+          <div class="badgeContainer">
+            <div id="pronouns" class="aboutBadge"><span>HE/HIM</span></div>
+            <div id="lgbt" class="aboutBadge"><span>LGBT</span></div>
+          </div>
+          <div class="textAndLinks">
+            <div class="aboutTextP">
+              <p>I'm Rafiq, a 31 year-old software developer originally from St. Louis, currently living in Chicago 🌃
+                with my bearded dragon, Wrex 🦎
+                <br /> I studied biology 🧬 and religious studies 🕍 in university, but found my passion (and career) in
+                coding and design ✨
+              </p>
+              <p>
+                With 7+ years of professional devlopment experience, I've built everything from backend automation
+                software,
+                to robust REST API integration, to full-fledged javascript framework front-end websites
+              </p>
+              <p>
+                I'm also a creative hobbyist who dabbles in building mechanical keyboards 🛠️, digital illustration 🎨,
+                frontend
+                web-design 💻, specialty coffee ☕️, and many other things
+              </p>
+              <p>
+                If you want to know more about any of the things I'm working on, feel free to ask or check out the links
+                here 👉
+              </p>
+            </div>
+
+            <div class="linkGridContainer">
+              <div class="linkGrid">
+                <div class="button" onclick="smoothScrollAnchor('topfivespotify')"><img
+                    src="assets/svg/react.svg" /><span class="linkText">React App</span></div>
+                <div class="button" onclick="smoothScrollAnchor('threeJsApp')"><img src="assets/svg/sun-fog.svg" /><span
+                    class="linkText">Three.js Site</span></div>
+                <div class="button" onclick="smoothScrollAnchor('contact')"><img src="assets/svg/contact.svg"
+                    alt="Twitter" /><span class="linkText">Contact</span></div>
+                <div class="button" onclick="smoothScrollAnchor('coffee')"><img src="assets/svg/coffee-cup-icon.svg"
+                    alt="Twitter" /><span class="linkText">Coffee</span></div>
+                <div class="button" onclick="smoothScrollAnchor('keyboards')"><img src="assets/svg/keyboard.svg"
+                    alt="Twitter" /><span class="linkText">Keyboards</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aboutImageContainer" id="aboutImageContainer">
+          <img id="aboutImage" src="assets/Chicago1.jpg" alt="Eastern Chicago" />
+        </div>
+      </div>
+    </section>
+    <blockquote>
+      <p>Most of the good programmers do programming not because they expect to get paid or get adulation by the public,
+        but because it is fun to program.<br />― Linus Torvalds</p>
+    </blockquote>
+    <div class="sectionContainer">
+      <div class="outerSectionImageContainer" id="topFiveLoginImg" img-caption="Top 5 Spotify login page">
+        <img src="assets/top5spotifylogin.png" alt="Top 5 login">
+      </div>
+      <section id="topfivespotify">
+        <h2>🎶 🟢 Top Five Spotify</h2>
+        <h3>
+          Spotify API Data Visualizer
+        </h3>
+        <div class="contentContainer">
+          <div class="contentSectionText projectTextContainer">
+            <p>
+              This is a hobby project built from the ground up to practice using ReactJS, as well as integrating with a
+              public API
+            </p>
+            <p>
+              <strong>Goal: </strong>To display the user's Top 5 Spotify data in a visually-appealing
+              manner,
+              easily screenshotted for posting online or sharing with friends
+            </p>
+            "Top Five Spotify" uses the following technologies:
+            <ul>
+              <li>ReactJS</li>
+              <li>Axios</li>
+              <li>ExpressJS</li>
+              <li>NodeJS</li>
+              <li>React Bootstrap</li>
+            </ul>
+
+          </div>
+          <div class="contentSectionImgContainer" img-caption="Example of what a logged-in user would see">
+            <img src="assets/top5spotify.png" />
+          </div>
+        </div>
+        <hr />
+        <div class="additionalContentContainer">
+          <p>
+            For more detailed information, feel free to visit the Github Repository 👉, or expand the accordion below 👇
+          </p>
+          <div class="projectLinkButtons">
+            <a class="button" href="https://github.com/OptimisticShibe/spotify-stats-dashboard" target="_blank"
+              rel="noopener noreferrer"><img src="assets/svg/github.svg" alt="topFive Github" />
+              <span class="contactLinkHandle"><strong>Github Repo</strong></span><img
+                src="./assets/svg/externalLink.svg" alt="externalLink" class="buttonHint external">
+            </a>
+            <a class="button" href="https://topfivespotify.rafiqramadan.com" target="_blank"
+              rel="noopener noreferrer"><img src="assets/svg/proto_logo.svg" alt="topFive site" id="topFiveLink" />
+              <span class="contactLinkHandle"><strong>Live App</strong></span><img src="./assets/svg/externalLink.svg"
+                alt="externalLink" class="buttonHint external">
+            </a>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordionPanel">
+            <button class="accordionBtn" aria-expanded="false" aria-controls="accordion1-content">
+              <h3 class="accordionHeader">Technical Details</h3>
+            </button>
+            <div class="accordionContent">
+              <div>
+                <div class="contentContainer projectAccordionContainer">
+                  <div class="contentSectionText">
+                    <div class="projectAccordionIntroText">
+                      <div>
+                        <p><strong>Top Five Spotify</strong> is an asynchronous frontend app that uses the spotify API
+                          to
+                          fetch a user's top 5 artists and tracks for each of the three timeranges allowed by the API
+                        </p>
+
+                      </div>
+                      <div class="contentSectionImgContainer" img-caption="App Logo">
+                        <img id="TopFiveLogo" src="/assets/svg/proto_logo.svg" alt="">
+                      </div>
+                    </div>
+                    <p>
+                      The use-flow of the app is as follows:
+                    <ol>
+                      <li>User clicks "login to Spotify"</li>
+                      <li>App sends an authorization code request to Spotify with the client ID and requested scopes
+                      </li>
+                      <li>User is redirected to Spotify's website to sign in, and allow the app to access specific data
+                        in their account</li>
+                      <li>Spotify redirects back to TopFiveSpotify with an authorization code </li>
+                      <li>Code is caught by custom <strong>useAuth</strong> hook to route through the express server to
+                        request an auth token from Spotify through a separate endpoint</li>
+                      <li>If successful, app will refresh, and user will see the full app page with their data already
+                        loaded</li>
+                    </ol>
+                    </p>
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div class="accordionStack">
+                    <h3>Features of Interest</h3>
+                    <div class="accordion">
+                      <div class="accordionPanel">
+                        <button class="accordionBtn" aria-expanded="false" aria-controls="accordion2-content">
+                          <h4 class="accordionHeader"><span class="emojiIcon">📱</span> Responsive, Mobile Layout</h4>
+                        </button>
+                        <div class="accordionContent">
+                          <div>
+                            <p>
+                              TopFiveSpotify was designed with responsiveness in mind
+                            </p>
+                            <p>
+                              Using React Bootstrap's
+                              breakpoints,
+                              the
+                              app will shift into the following vertical format:
+                            </p>
+                            <div class="projectDetailImage" img-caption="Mobile Version View">
+                              <img src="assets/topFiveSpotifyDemo/topFiveDemoMobile.png" alt="mobile view"
+                                class="verticalImage">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='accordion'>
+                      <div class='accordionPanel'>
+                        <button class='accordionBtn' aria-expanded='false' aria-controls='accordion-content'>
+                          <h4 class='accordionHeader'><span class="emojiIcon">🔁</span> Asynchronous API Data Fetching
+                          </h4>
+                        </button>
+                        <div class='accordionContent'>
+                          <div>
+                            <p>
+                              There are a total of 7 calls to the Spotify API after auth. The <a
+                                href="https://developer.spotify.com/documentation/web-api/reference/get-users-profile"
+                                target="_blank" rel="noopener noreferrer" alt="Spotify API Reference">Get User
+                                Profile</a>, and the
+                              <a href="https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks"
+                                target="_blank" rel="noopener noreferrer" alt="Spotify API Reference">Get Users Top
+                                Artists and Tracks</a> endpoints 3 times each (hitting all three timeframe
+                              parameters)
+                              <br />
+                              This app loads all 7 at once in a Promise chain and stores the data in the client's
+                              localstorage
+                            </p>
+                            <div class="projectDetailImage">
+                              <img src="assets/topFiveSpotifyDemo/async1.png" alt="mobile view" class="">
+                            </div>
+                            <div class="projectDetailImage" img-caption="Spotify API Callstack">
+                              <img src="assets/topFiveSpotifyDemo/async2.png" alt="mobile view" class="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='accordion'>
+                      <div class='accordionPanel'>
+                        <button class='accordionBtn' aria-expanded='false' aria-controls='accordion-content'>
+                          <h4 class='accordionHeader'><span class="emojiIcon">🚧</span> Demo Mode</h4>
+                        </button>
+                        <div class='accordionContent'>
+                          <div>
+                            <p>
+                              <strong>Problem: </strong>Due to changes to Spotify's API rate quota, my app will not work
+                              with anyone not
+                              explicitly added to my developer whitelist, and will return a <code>403 error</code> if an
+                              endpoint call is made after authentication
+                            </p>
+                            <p>
+                              <strong>Solution: </strong> Catching the HTML error and displaying demo data for the user
+                              instead, along with an alert banner notifying them of the circumstance
+                            </p>
+                            <div class="projectDetailImage" img-caption="Demo Mode View">
+                              <img src="assets/topFiveSpotifyDemo/topFiveDemoMode.png" alt="Demo Mode" class="">
+                            </div>
+                            <br />
+                            <div class="projectDetailImage" img-caption="Demo Mode Explainer Modal">
+                              <img src="assets/topFiveSpotifyDemo/topFiveDemoModeModal.png" alt="Demo Mode Modal"
+                                class="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <blockquote class="blockquoteRight">
+      <p>An API that isn't comprehensible isn't usable. <br />― James Gosling</p>
+    </blockquote>
+
+    <div class="sectionContainer">
+      <section id="threeJsApp">
+        <h2>📐💻 Three.js Personal Site</h2>
+        <h3>
+          A Test of Vanilla(ish) WebDesign
+        </h3>
+        <div class="contentContainer">
+          <div class="contentSectionText projectTextContainer">
+            <p>
+              Inspired by websites featuring <strong>Three.js</strong> 3D models and animations, I decided to rebuild my
+              ancient personal site from the ground up. And the site you're reading this on is the result!
+            </p>
+            <p>
+              <strong>Goal: </strong>To try out Three.js <em>and especially</em> to test my vanilla web design
+              knowledge
+              <br />
+              Aside from Three.js, this website was built with <strong><u>zero</u></strong> external packages
+            </p>
+            <p>
+              Some examples of modern HTML and CSS tricks/techniques I learned or improved my knowledge of in this
+              site's design:
+            </p>
+            <ul>
+              <li>pseudo-selectors</li>
+              <li>Clamp() Resizing</li>
+              <li>CSS Filter() Effects</li>
+              <li>Smooth Scroll</li>
+              <li>Grid + Flexbox Positioning</li>
+            </ul>
+          </div>
+          <div class="contentSectionImgContainer" img-caption="The rare under-20-line package.json 😎">
+            <img src="assets/threeJsPersonalDemo/packageJson.png" />
+          </div>
+        </div>
+        <hr />
+        <div class="additionalContentContainer">
+          <p>
+            For more detailed information, feel free to visit the Github Repository 👉, or expand the accordion below 👇
+          </p>
+          <div class="projectLinkButtons">
+            <a class="button" href="https://github.com/OptimisticShibe" target="_blank" rel="noopener noreferrer"><img
+                src="assets/svg/github.svg" alt="Personal Site Github Repo" />
+              <span class="contactLinkHandle"><strong>Github Repo</strong></span><img
+                src="./assets/svg/externalLink.svg" alt="externalLink" class="buttonHint external">
+            </a>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordionPanel">
+            <button class="accordionBtn" aria-expanded="false" aria-controls="accordion1-content">
+              <h3 class="accordionHeader">Technical Details</h3>
+            </button>
+            <div class="accordionContent">
+              <div>
+                <div class="contentContainer projectAccordionContainer">
+                  <div class="contentSectionText">
+                    <div class="projectAccordionIntroText">
+                      <div>
+                        <p>This site is a simple static portfolio/resume site with a complex dynamic
+                          <code>&lt;canvas&gt;</code> background element, powered by Three.js. While the general idea of
+                          the site was planned from the start, the layout has evolved over time
+                        </p>
+                        <p>
+                          As a hobbyist digital artist, it's important to me that a site showcasing my portfolio is also
+                          something worth being proud of from both a tehcnical and creative standpoint
+                        </p>
+                      </div>
+                      <div class="contentSectionImgContainer">
+                        <img id="RistrettoJairo" src="/assets/threeJsPersonalDemo/RistrettoAvi_MrJairo.png" alt="">
+                      </div>
+                    </div>
+                    <h4>
+                      Outline of the structure of the site:
+                    </h4>
+                    <p>
+                    <ul>
+                      <li>Three.js-generated dynamic background on a <code>&lt;canvas&gt;</code> element</li>
+                      <li>12-column grid <code>&lt;main&gt;</code> element organizing alternating template
+                        <code>&lt;section&gt;</code> containers
+                      </li>
+                      <li>Custom designed link and button elements for internal & external navigation</li>
+                      <li>Mixture of hobby and professional content</li>
+                    </ul>
+                    </p>
+                  </div>
+                </div>
+                <hr />
+                <div>
+                  <div class="accordionStack">
+                    <h4 class="borderBottom">Features of Interest</h4>
+                    <div class="accordion">
+                      <div class="accordionPanel">
+                        <button class="accordionBtn" aria-expanded="false" aria-controls="accordion2-content">
+                          <h4 class="accordionHeader"><span class="emojiIcon">🔻</span> Three.JS 3D Model Background
+                          </h4>
+                        </button>
+                        <div class="accordionContent">
+                          <div>
+                            <p>
+                              The main draw of the project: the 3D object-filled background. After choosing a coffee and
+                              <a class="helpLink tooltip" id="synthwaveQ" href="https://en.wikipedia.org/wiki/Synthwave"
+                                data-text="What is synthwave?" target="_blank" rel="noopener noreferrer">Synthwave</a>
+                              theme,
+                              the only remaining tasks were to find appropriate models and generate the javascript
+                              needed
+                            </p>
+                            <div class="projectDetailImage" img-caption="The Renderer Function">
+                              <img src="assets/threeJsPersonalDemo/ThreeJsDemo1.png" alt="renderer.js" class="">
+                            </div>
+                            <h5 class="borderBottom">Challenges:</h5>
+                            <p>
+                              Aside from the expected challenges of learning a new framework/package, I ran into quite a
+                              few technical barriers that required some clever solutions
+                            </p>
+                            <p><strong>Changing background size: </strong>Out of the box, a generated Three.js canvas
+                              will not adjust to a user changing the viewport size
+                              <br />
+                              Ultimately the best solution I managed to create was allowing the canvas to stretch with
+                              resizing. Not perfect, but much better than a harsh cut-off showing the plain color
+                              element behind the canvas
+                            </p>
+                            <div class="projectDetailImage"
+                              img-caption="Site loaded at full screen size, and shrunk to mobile thinness">
+                              <img src="assets/threeJsPersonalDemo/ThreeJsDemo2.png" alt="renderer.js"
+                                class="verticalImage">
+                            </div>
+                            <p><strong>Controlling Bean Randomization: </strong>The coffee bean "starfield" at the top
+                              of the page is generated with some controlled randomization. Truly random spawning logic
+                              caused some issues with beans clipping into one another, or floating directly in the
+                              viewport camera</p>
+                            <p>With some trial and error, I eventually crafted a randomization function that cut out a
+                              range of X and Z axis coordinates, to disallow bad bean placement. I also created
+                              somewhat-randomized spin logic, to avoid them from looking truly cloned</p>
+                            <div class="projectDetailImage" img-caption="Beans floating in the synthwave void">
+                              <img src="assets/threeJsPersonalDemo/ThreeJsDemo3.png" alt="renderer.js" class="">
+                            </div>
+                            <p><strong>Additional Challenges: </strong>
+                            <ul>
+                              <li>Plotting out the camera movement mapped to page scroll</li>
+                              <li>Sizing and lighting 3D models</li>
+                              <li>Scaling canvas to device size</li>
+                              <li>Creating a smooth animation loop</li>
+                            </ul>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='accordion'>
+                      <div class='accordionPanel'>
+                        <button class='accordionBtn' aria-expanded='false' aria-controls='accordion-content'>
+                          <h4 class='accordionHeader'><span class="emojiIcon">🎨</span> Design
+                          </h4>
+                        </button>
+                        <div class='accordionContent'>
+                          <div>
+                            <p>
+                              Informed by my 508 compliance professional work, I opted for a high-contrast site from the
+                              outset 🔅🔆
+                            </p>
+                            <p>
+                              Pure white and black squares would make for a stark and unfriendly site, but rounding the
+                              corners, adding some transparency to the black, and a slight box-shadow glow made a world
+                              of a difference ⬜⬛
+                            </p>
+                            <p>
+                              There is much more that could be done, especially within the content displays. But the
+                              main goal was to create a cohesive design without any jarring jumps or changes 👍⭕
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='accordion'>
+                      <div class='accordionPanel'>
+                        <button class='accordionBtn' aria-expanded='false' aria-controls='accordion-content'>
+                          <h4 class='accordionHeader'><span class="emojiIcon">🧪</span> Custom JS Utilities/Features
+                          </h4>
+                        </button>
+                        <div class='accordionContent'>
+                          <div>
+                            <p>
+                              <strong>Some custom JS scripts and CSS tricks were needed to improve
+                                functionality:</strong>
+                            </p>
+                            <ul class="bulletlessList">
+                              <li><span class="emojiIcon">
+                                  📋
+                                </span>Copy-to-clipboard script </li>
+                              <li><span class="emojiIcon">
+                                  💬
+                                </span>Custom pseudo-selector tooltips </li>
+                              <li><span class="emojiIcon">
+                                  ⚓
+                                </span>Smooth-scroll anchors </li>
+                              <li><span class="emojiIcon">
+                                  ⬆
+                                </span>Scroll-to-top button hiding logic </li>
+                              <li><span class="emojiIcon">
+                                  ↕
+                                </span>Custom-built accordion components </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="blurBgWrapper">
+        <div class="outerSectionImageContainer" id="threeJsOuterImg" img-caption="The Webdesign Process™">
+          <img src="assets/threeJsPersonalDemo/ristretto 1.png" alt="Top 5 login">
+          <span class="emojiIcon" id="ristrettoEmoji">👇👍</span>
+          <img src="assets/threeJsPersonalDemo/ristretto 4.png" alt="Top 5 login">
+        </div>
+      </div>
+    </div>
+    <blockquote>
+      <p></p>
+    </blockquote>
+    <div class="sectionContainer" id="contactSectionContainer">
+      <div class="outerSectionImageContainer" id="contactImgCont" img-caption="My beareded dragon, Wrex">
+        <img id="contactImage" src="assets/wrex2.jpg" alt="Wrex" />
+      </div>
+      <section class="contactSection" id="contact">
+        <h2>📧 🌐 Contact</h2>
+        <div class="contactContainer">
+          <div class="contactParagraph">
+            <p>
+              I am currently looking for long-term frontend or full-stack development employment, so please feel free to
+              reach out if you have an opportunity that you think may be a good fit for me
+            </p>
+            <p>
+              I can be contacted on either LinkedIn or by Email (preferred), and am available by phone most afternoons
+            </p>
+          </div>
+
+          <div class="aboutContactGrid">
+            <div id="emailContact" class="button clipboard" copy-content="ramadanrafi@gmail.com"
+              data-text="copied to clipboard!"><img src="assets/svg/email.svg" alt="Email" />
+              <span class="contactLinkHandle">ramadanrafi@gmail.com</span><img src="./assets/svg/clipboard.svg"
+                alt="Clipboard" class="buttonHint">
+            </div>
+            <a id="linkedInContact" class="button" href="https://www.linkedin.com/in/rafiq-ramadan-748640117/"
+              target="_blank" rel="noopener noreferrer"><img src="assets/svg/linkedin.svg" alt="LinkedIn" />
+              <span class="contactLinkHandle"><strong>Rafiq Ramadan</strong></span><img
+                src="./assets/svg/externalLink.svg" alt="Clipboard" class="buttonHint external">
+            </a>
+            <div id="phoneContact" class="button clipboard" copy-content="+16363282955"
+              data-text="copied to clipboard!">
+              <img src="assets/svg/phone.svg" alt="Phone Number" />
+              <span class="contactLinkHandle"><strong>+1 636-328-2955</strong></span><img
+                src="./assets/svg/clipboard.svg" alt="Clipboard" class="buttonHint">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <blockquote class="blockquoteRight">
+      <p>My personal philosophy would be: don't whine, don't let opportunities pass you by, be willing to work hard, and
+        remember that you don't know as much as you think you do, ever.<br />― James Marsters</p>
+    </blockquote>
+
+    <!-- /* * * * * ☕️ COFFEE SECTION ☕️ * * * * */ -->
+    <div class="sectionContainer">
+      <section class="contentContainer" id="coffee">
+        <div class="contentSectionText">
+          <h2>☕❤️‍🔥 Specialty Coffee</h2>
+          <p>
+            Beyond just "a drink to wake me up in the morning," I'm passionate about specialty third-wave coffee
+            <br />
+            There's a lot to it, so feel free to <a href="#" onclick="smoothScrollAnchor('contact')"
+              class="inlineLink">ask about it</a> if you contact me! I love learning about the coffee scenes in
+            other cities 😁
+          </p>
+          <h3>
+            Quick Info 🤓
+          </h3>
+          <ul id="coffeeStatsList">
+            <li>
+              <span><strong>Brew Method:</strong></span> <span>Aeropress <img class="inlineImage"
+                  src="/assets/svg/aeropress.svg" alt="aeropress"></span>
+            </li>
+            <li>
+              <span><strong>Favorite Roaster:</strong></span> <a href="https://proudmarycoffee.com" class="inlineLink"
+                target="_blank" rel="noopener noreferrer">Proud Mary<img class="inlineImage"
+                  src="/assets/svg/hand-palm.svg" alt="aeropress"></a>
+            </li>
+            <li><span><strong>Preferred Process:</strong></span><a
+                href="https://www.craftcoffeeguru.com/honey-processed-coffee/" class="inlineLink tooltip"
+                data-text="what is &#34;honey-processed&#34; coffee?">Yellow Honey<img class="inlineImage"
+                  src="/assets/svg/coffee-cherries.svg" alt="aeropress"></a></li>
+          </ul>
+        </div>
+
+        <div class="contentSectionImgContainer" id="coffeeSetup">
+          <img src="assets/coffeeSetup.jpg" />
+        </div>
+      </section>
+      <div class="outerSectionImageContainer" id="coffeeImgCont">
+        <img src="assets/RoboCoffee.png" alt="Coffee Ristretto">
+      </div>
+    </div>
+    <blockquote>
+      <p>Don't invest in an espresso machine at home unless you want a new hobby. <br />― James Hoffmann</p>
+    </blockquote>
+    <!-- /* * * * * 💻 KEYBOARD SECTION 💻 * * * * */ -->
+    <div class="sectionContainer">
+      <div class="outerSectionImageContainer" img-caption="A coffee-themed keyboard, because of course">
+        <img src="assets/coffeeKeyboard.jpg" id="outerKeyboard" alt="Coffee Keyboard">
+      </div>
+      <section id="keyboards">
+        <div>
+          <h2>💻🚧 Mechanical Keyboard Modding</h2>
+        </div>
+        <div class="contentContainer">
+          <div class="contentSectionText">
+            <p>
+              The classic "let me look up how to fix this thing" into full-fledged hobby story
+            </p>
+            <p>
+              During the pandemic, I discovered the appeal of building and modifying mechanical keyboards. There's a
+              certain joy to getting the visual and auditory aesthetics *just right*
+            </p>
+            <h3>
+              Quick Info 🤓
+            </h3>
+            <ul id="coffeeStatsList">
+              <li>
+                <span><strong>Best Switch:</strong></span> <span>C3 Tangerine <img class="inlineImage"
+                    src="/assets/svg/tangerine.svg" alt="aeropress"></span>
+              </li>
+              <li>
+                <span><strong>Layout:</strong></span> <span>65%<img class="inlineImage" src="/assets/svg/keyboard.svg"
+                    alt="aeropress"></span>
+              </li>
+              <li><span><strong>Typing Speed:</strong></span><span>150 WPM<img class="inlineImage"
+                    src="/assets/svg/race-flag.svg" alt="aeropress"></span></li>
+            </ul>
+          </div>
+
+          <div class="contentSectionImgContainer" id="keyboardWall" img-caption="One of my keyboard displays">
+            <img src="assets/keyboardWall.jpg" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <blockquote class="blockquoteRight">
+      <p>I'm a software developer. My keyboard is one of my most important tools...why shouldn't I customize it?</p>
+    </blockquote>
+
+    <a href="#" class="top" onclick="smoothScrollAnchor('top')" id="topScrollWrapper" style="visibility: hidden;">
+      <div class="scrollArrowContainer" id="topButtonContainer">
+        <img class="scrollArrow" id="topButton" src="assets/svg/down-arrow.svg" />
+      </div>
+    </a>
+  </main>
+
+
+  <script type="module" src="/src/SiteCanvas/SiteCanvas.js"></script>
+  <script type="text/javascript" src="./utils/clipboard.js">
+  </script>
+  <script type="text/javascript">
+    const smoothScrollAnchor = (id) => {
+      document.getElementById(id).scrollIntoView();
+    };
+  </script>
+  <script type="text/javascript">
+    const hideScrollToTop = () => {
+      const main = document.getElementById('main');
+      const button = document.getElementById('topScrollWrapper')
+      return main.scrollTop > 100 ? button.style.visibility = 'visible' : button.style.visibility = 'hidden';
+    }
+  </script>
+  <script type="text/javascript" src="/utils/vanilla-tilt.js"></script>
+  <script type="text/javascript" src="/utils/accordion.js"></script>
+  <script type="text/javascript" src="/utils/carousel.js"></script>
+</body>
+
+</html>
