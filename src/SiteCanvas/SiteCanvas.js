@@ -12,7 +12,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BEAN_RATIO } from "./../../utils/constants.js";
 import { plusOrMinus } from "./../../utils/utils.js";
-import { vaporwaveBg } from "./../../assets/vaporwave4.jpg";
+// import { vaporwaveBg } from "./../../assets/vaporwave4.jpg";
 
 let camera;
 let controls;
@@ -108,7 +108,7 @@ function animate() {
 }
 
 function setBackground() {
-  const BG_IMAGE_FILE = vaporwaveBg;
+  const BG_IMAGE_FILE = "./../../assets/vaporwave4.jpg";
   const bgImg = new Image();
   bgImg.src = BG_IMAGE_FILE;
   bgImg.onload = () => {

@@ -1,10 +1,10 @@
 import { LoadingManager } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { setupModel } from "./setupModel.js";
-import { coffeeMachineGltf } from "./../../../../assets/coffee_machine/scene.gltf";
-import { coffeeCupGltf } from "./../../../../assets/coffee_cup_with_plate/scene.gltf";
-import { lowPolyBeanGltf } from "./../../../../assets/coffee_bean_low-poly/scene.gltf";
-import { coffeeBeanMainGltf } from "./../../../../assets/coffee_bean/scene.gltf";
+// import { coffeeMachineGltf } from "./../../../../assets/coffee_machine/scene.gltf";
+// import { coffeeCupGltf } from "./../../../../assets/coffee_cup_with_plate/scene.gltf";
+// import { lowPolyBeanGltf } from "./../../../../assets/coffee_bean_low-poly/scene.gltf";
+// import { coffeeBeanMainGltf } from "./../../../../assets/coffee_bean/scene.gltf";
 
 async function loadCoffee() {
   const manager = new LoadingManager();
@@ -22,10 +22,10 @@ async function loadCoffee() {
   };
 
   const [coffeeMachineData, coffeeCupData, coffeeBeanData, coffeeBeanLightData] = await Promise.all([
-    loader.loadAsync(coffeeMachineGltf),
-    loader.loadAsync(coffeeCupGltf),
-    loader.loadAsync(lowPolyBeanGltf),
-    loader.loadAsync(coffeeBeanMainGltf),
+    loader.loadAsync("./../../../../assets/coffee_machine/scene.gltf"),
+    loader.loadAsync("./../../../../assets/coffee_cup_with_plate/scene.gltf"),
+    loader.loadAsync("./../../../../assets/coffee_bean_low-poly/scene.gltf"),
+    loader.loadAsync("./../../../../assets/coffee_bean/scene.gltf"),
   ]);
 
   const coffeeMachine = setupModel(coffeeMachineData);
