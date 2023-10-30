@@ -245,6 +245,18 @@ blockquote p {
   cursor: pointer;
 }
 
+.mobileConstruction {
+  display: none;
+  background-color: #29346e;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 20rem;
+  overflow: hidden;
+}
+
 /* * * * * * * 🤯 HEADER 🤯 * * * * * * */
 
 header {
@@ -1013,6 +1025,9 @@ section > h3 {
 
 /* Mobile */
 @media screen and (width <= 800px) {
+  .mobileBlocked {
+    display: none;
+  }
   main {
     scroll-snap-type: none;
   }
@@ -1078,5 +1093,8 @@ section > h3 {
 
   .top {
     display: none;
+  }
+  .mobileConstruction {
+    display: flex;
   }
 }

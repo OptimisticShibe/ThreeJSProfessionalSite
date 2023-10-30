@@ -5,7 +5,9 @@
   <title>Rafiq Ramadan, Frontend Developer</title>
   <!-- Embed info -->
   <meta content="Rafiq Ramadan, Frontend Developer" property="og:title" />
-  <meta content="Portfolio site" property="og:description" />
+  <meta
+    content="Rafiq Ramadan's Web Developer portfolio website, showcasing his applications & design skills, along with some general info about him."
+    property="og:description" />
   <meta content="https://rafiqramadan.com" property="og:url" />
   <meta content="./assets/embedimg.png" property="og:image" />
   <meta content="#29377a" data-react-helmet="true" name="theme-color" />
@@ -17,9 +19,13 @@
 </head>
 
 <body>
-  <div class="lds-dual-ring" id="loadingSpinner"></div>
-  <canvas id="bg"></canvas>
-  <main class="container" id="main">
+
+  <div class="mobileConstruction">
+    <h1>This site is not mobile-ready, please visit it on desktop.</h1>
+  </div>
+  <div class="lds-dual-ring mobileBlocked" id="loadingSpinner"></div>
+  <canvas id="bg" class="mobileBlocked"></canvas>
+  <main class="container mobileBlocked" id="main">
     <header id="top">
       <div class="headerContentContainer">
         <div class="headerText">
