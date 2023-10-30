@@ -11,7 +11,7 @@
 <body>
   <div class="lds-dual-ring" id="loadingSpinner"></div>
   <canvas id="bg"></canvas>
-  <main class="container" id="main" onscroll="hideScrollToTop()">
+  <main class="container" id="main">
     <header id="top">
       <div class="headerContentContainer">
         <div class="headerText">
@@ -46,8 +46,7 @@
               rel="noopener noreferrer" data-text="Email">
               <img src="/assets/svg/email.svg" alt="linkedIn logo" />
             </a>
-            <button id="linkedInSmall" class="cirButton tooltip" onclick="smoothScrollAnchor('contact')" target="_blank"
-              rel="noopener noreferrer" data-text="Phone">
+            <button id="linkedInSmall" class="cirButton tooltip smoothScroll" scroll-id="contact" data-text="Phone">
               <img src="/assets/svg/phone.svg" alt="linkedIn logo" />
             </button>
           </div>
@@ -60,19 +59,17 @@
           <div class="buttonContainerLg">
             <a id="githubSmall" class="cirButton tooltip" href="https://github.com/OptimisticShibe" target="_blank"
               rel="noopener noreferrer" data-text="Github"><img src="/assets/svg/github.svg" alt="github" /></a>
-            <button id="topFiveAppSmall" class="cirButton tooltip" target="_blank" rel="noopener noreferrer"
-              data-text="TopFive"><img src="/assets/svg/react.svg" alt="github"
-                onclick="smoothScrollAnchor('topfivespotify')" /></button>
-            <button id="threeJsAppSmall" class="cirButton tooltip" target="_blank" rel="noopener noreferrer"
-              data-text="Three.js"><img src="/assets/svg/sun-fog.svg" alt="Three.js"
-                onclick="smoothScrollAnchor('threeJsApp')" /></button>
+            <button id="topFiveAppSmall" class="cirButton tooltip smoothScroll" data-text="TopFive"><img
+                src="/assets/svg/react.svg" scroll-id="topfivespotify" alt="github" /></button>
+            <button id="threeJsAppSmall" class="cirButton tooltip smoothScroll" data-text="Three.js"><img
+                src="/assets/svg/sun-fog.svg" scroll-id="threeJsApp" alt="Three.js" /></button>
           </div>
         </div>
       </div>
     </header>
     <div class="scrollArrowBox">
       <div class="scrollArrowContainer">
-        <img class="scrollArrow" src="/assets/svg/down-arrow.svg" onclick="smoothScrollAnchor('about')" />
+        <img class="scrollArrow smoothScroll" src="/assets/svg/down-arrow.svg" scroll-id="about" />
       </div>
     </div>
     <section id="about">
@@ -108,15 +105,15 @@
 
             <div class="linkGridContainer">
               <div class="linkGrid">
-                <div class="button" onclick="smoothScrollAnchor('topfivespotify')"><img
-                    src="/assets/svg/react.svg" /><span class="linkText">React App</span></div>
-                <div class="button" onclick="smoothScrollAnchor('threeJsApp')"><img
-                    src="/assets/svg/sun-fog.svg" /><span class="linkText">Three.js Site</span></div>
-                <div class="button" onclick="smoothScrollAnchor('contact')"><img src="/assets/svg/contact.svg"
+                <div class="button smoothScroll" scroll-id='topfivespotify'><img src="/assets/svg/react.svg" /><span
+                    class="linkText">React App</span></div>
+                <div class="button smoothScroll" scroll-id="threeJsApp"><img src="/assets/svg/sun-fog.svg" /><span
+                    class="linkText">Three.js Site</span></div>
+                <div class="button smoothScroll" scroll-id="contact"><img src="/assets/svg/contact.svg"
                     alt="Twitter" /><span class="linkText">Contact</span></div>
-                <div class="button" onclick="smoothScrollAnchor('coffee')"><img src="/assets/svg/coffee-cup-icon.svg"
+                <div class="button smoothScroll" scroll-id="coffee"><img src="/assets/svg/coffee-cup-icon.svg"
                     alt="Twitter" /><span class="linkText">Coffee</span></div>
-                <div class="button" onclick="smoothScrollAnchor('keyboards')"><img src="/assets/svg/keyboard.svg"
+                <div class="button smoothScroll" scroll-id="keyboards"><img src="/assets/svg/keyboard.svg"
                     alt="Twitter" /><span class="linkText">Keyboards</span></div>
               </div>
             </div>
@@ -596,8 +593,8 @@
           <p>
             Beyond just "a drink to wake me up in the morning," I'm passionate about specialty third-wave coffee
             <br />
-            There's a lot to it, so feel free to <a href="#" onclick="smoothScrollAnchor('contact')"
-              class="inlineLink">ask about it</a> if you contact me! I love learning about the coffee scenes in
+            There's a lot to it, so feel free to <a href="#" class="smoothScroll inlineLink" scroll-id="contact">ask
+              about it</a> if you contact me! I love learning about the coffee scenes in
             other cities 😁
           </p>
           <h3>
@@ -676,7 +673,7 @@
       <p>I'm a software developer. My keyboard is one of my most important tools...why shouldn't I customize it?</p>
     </blockquote>
 
-    <a href="#" class="top" onclick="smoothScrollAnchor('top')" id="topScrollWrapper" style="visibility: hidden;">
+    <a href="#" class="top smoothScroll" scroll-id="top" id="topScrollWrapper" style="visibility: hidden;">
       <div class="scrollArrowContainer" id="topButtonContainer">
         <img class="scrollArrow" id="topButton" src="/assets/svg/down-arrow.svg" />
       </div>
@@ -685,22 +682,7 @@
 
 
   <script type="module" src="/src/SiteCanvas/SiteCanvas.js"></script>
-  <script type="text/javascript" src="./utils/clipboard.js">
-  </script>
-  <script type="text/javascript">
-    const smoothScrollAnchor = (id) => {
-      document.getElementById(id).scrollIntoView();
-    };
-  </script>
-  <script type="text/javascript">
-    const hideScrollToTop = () => {
-      const main = document.getElementById('main');
-      const button = document.getElementById('topScrollWrapper')
-      return main.scrollTop > 100 ? button.style.visibility = 'visible' : button.style.visibility = 'hidden';
-    }
-  </script>
-  <script type="text/javascript" src="/utils/vanilla-tilt.js"></script>
-  <script type="text/javascript" src="/utils/accordion.js"></script>
+  <script type="module" src="./utils/utils.js"></script>
 </body>
 
 </html>

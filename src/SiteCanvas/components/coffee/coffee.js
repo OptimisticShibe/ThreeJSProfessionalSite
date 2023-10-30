@@ -19,10 +19,10 @@ async function loadCoffee() {
   };
 
   const [coffeeMachineData, coffeeCupData, coffeeBeanData, coffeeBeanLightData] = await Promise.all([
-    loader.loadAsync("/assets/coffee_machine/scene.gltf"),
-    loader.loadAsync("/assets/coffee_cup_with_plate/scene.gltf"),
-    loader.loadAsync("/assets/coffee_bean_low-poly/scene.gltf"),
-    loader.loadAsync("/assets/coffee_bean/scene.gltf"),
+    loader.loadAsync("../../../../assets/coffee_machine/scene.gltf"),
+    loader.loadAsync("../../../../assets/coffee_cup_with_plate/scene.gltf"),
+    loader.loadAsync("../../../../assets/coffee_bean_low-poly/scene.gltf"),
+    loader.loadAsync("../../../../assets/coffee_bean/scene.gltf"),
   ]);
 
   const coffeeMachine = setupModel(coffeeMachineData);

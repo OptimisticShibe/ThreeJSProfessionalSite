@@ -1,5 +1,4 @@
 import { loadCoffee } from "./components/coffee/coffee.js";
-import { loadVaporwave } from "./components/vaporwave/vaporwave.js";
 import { createCamera } from "./components/camera.js";
 import { createLights } from "./components/lights.js";
 import { createScene } from "./components/scene.js";
@@ -114,7 +113,7 @@ function animate() {
 }
 
 function setBackground() {
-  const BG_IMAGE_FILE = "assets/vaporwave4.jpg";
+  const BG_IMAGE_FILE = "../../assets/vaporwave4.jpg";
   const bgImg = new Image();
   bgImg.src = BG_IMAGE_FILE;
   bgImg.onload = () => {

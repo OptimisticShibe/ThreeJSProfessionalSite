@@ -1,14 +1,10 @@
-window.onload = () => {
-  return document.querySelectorAll(".accordionBtn").forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-      const activePanel = e.target.closest(".accordionPanel");
-      if (!activePanel) return;
-      toggleAccordion(activePanel);
-    });
+export default document.querySelectorAll(".accordionBtn").forEach((elem) => {
+  elem.addEventListener("click", (e) => {
+    const activePanel = e.target.closest(".accordionPanel");
+    if (!activePanel) return;
+    toggleAccordion(activePanel);
   });
-};
-
-// const accordion = document.querySelector(".accordionBtn");
+});
 
 function toggleAccordion(panelToActivate) {
   const activeButton = panelToActivate.querySelector("button");
