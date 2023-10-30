@@ -37,8 +37,6 @@ setBackground();
 // Load models, textures
 const { coffeeMachine, coffeeCup, coffeeBean, coffeeBeanLight } = await loadCoffee();
 
-const { sun, sunLight } = await loadVaporwave();
-
 // Function calls to generate coffee stars
 // TODO: low poly in back, high in front
 // coffeeBeanStarfield(coffeeBean, 10, 1.5, true);
