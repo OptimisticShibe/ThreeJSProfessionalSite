@@ -21,7 +21,6 @@ let scene;
 let loop;
 let beanRotate = [];
 
-// TODO: spinner etc. while shit loads
 camera = createCamera();
 renderer = createRenderer();
 scene = createScene();
@@ -38,15 +37,11 @@ setBackground();
 const { coffeeMachine, coffeeCup, coffeeBean, coffeeBeanLight } = await loadCoffee();
 
 // Function calls to generate coffee stars
-// TODO: low poly in back, high in front
-// coffeeBeanStarfield(coffeeBean, 10, 1.5, true);
 coffeeBeanStarfield(coffeeBeanLight, 0.3, 0.01, false);
 
 const gridHelper = new THREE.GridHelper(200, 50);
 
 scene.add(coffeeMachine, coffeeCup);
-// sun.position.z = 15;
-// sun.position.setX(-5);
 
 function start() {
   loop.start();
@@ -56,7 +51,6 @@ function stop() {
 }
 
 function coffeeBeanStarfield(coffeeBean, scale, scaleModifier, lowPoly = true) {
-  // const beanNumber = lowPoly ? 2000 : 1000;
   const beanRatio = (numBeans) => {
     let results = [BEAN_RATIO.startingBean];
     for (let i = 1; i < numBeans; i++) {
