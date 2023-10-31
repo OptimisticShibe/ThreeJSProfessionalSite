@@ -522,7 +522,7 @@ button {
   content: "";
   font-size: 1.5rem;
   /* triangle */
-  background-image: url("https://cdn.discordapp.com/attachments/279406927140749313/1147305842522194020/neonPinkTriangle.png");
+  background-image: url("./assets/neonPinkTriangle.png");
   transform: rotate(90deg);
   justify-content: center;
   align-items: center;
